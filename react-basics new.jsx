@@ -108,5 +108,41 @@ root.render(
     React.createElement(App)
   )
 )
-this is for the count uodation
+this is for the count updation.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Example:
+App.jsx:
+import React, { useState } from 'react';
+
+function App() {
+  const [color, setColor] = useState('white');
+
+  const changeColor = () => {
+    const colors = ['#ffadad', '#ffd6a5', '#fdffb6', '#caffbf', '#9bf6ff'];
+    const random = colors[Math.floor(Math.random() * colors.length)];
+    setColor(random);
+  };
+
+  return (
+    <div style={{ backgroundColor: color, height: '100vh', padding: '20px' }}>
+      <button onClick={changeColor}>Change Background</button>
+    </div>
+  );
+}
+
+export default App;
+index.js:
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App.jsx';
+
+const container = document.getElementById('root');
+const root = createRoot(container);
+
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+Output ; changes background
 
