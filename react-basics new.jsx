@@ -20,7 +20,55 @@ export function App(props) {
 // Log to console
 console.log('Hello console')
 index.js:
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
+import { App } from './App.jsx'
+
+ReactDOM.createRoot( 
+  document.querySelector('#root')
+).render(<App />)
+Output :
+Hello React.
+Start editing to see some magic happen! (This is basic one)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Example:
+App.jsx:
+import React from 'react';
+
+export function App() {
+  return <h1>Hello from App</h1>;
+}
+
+export function M1(props) {
+  return <p>Name: {props.name}</p>;
+}
+
+export function M2(props) {
+  return <p>Age: {props.age}</p>;
+}
+index.js:
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+import { App, M1, M2 } from './App.jsx'
+
+ReactDOM.createRoot( 
+  document.querySelector('#root')
+).render(
+  <>
+  <App />)
+  <M1 name="saii" />
+  <M2 age ="20" />
+  </>
+  );
+Output:
+Hello from App
+)
+Name: saii
+
+Age: 20
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Example :
 App.jsx:
 import React, { useRef, useState } from 'react'
