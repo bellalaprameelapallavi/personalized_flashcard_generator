@@ -5,6 +5,22 @@ components - a piece of UI types ( functional and classic)
 props - read only properties 
 */
 /* Another concept is state management */
+Example:
+App.jsx:
+import React from 'react';
+
+export function App(props) {
+  return (
+    <div className='App'>
+      <h1>Hello React.</h1>
+      <h2>Start editing to see some magic happen!</h2>
+    </div>
+  );
+}
+// Log to console
+console.log('Hello console')
+index.js:
+
 Example :
 App.jsx:
 import React, { useRef, useState } from 'react'
@@ -30,7 +46,7 @@ const App = () => {
 
 
 export default App 
-index.jsx:
+index.js:
 import App from './App.jsx'
 import React from 'react'
 import { createRoot } from 'react-dom/client'
